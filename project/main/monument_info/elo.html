@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Ellora Caves</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/ellora caves.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#2b9098" />
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#2b9098">
+  <!-- IOS safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2b9098">
+  <style type="text/css">
+    /*.hero::before {    
+      content: "";
+      background-image: url('https://source.unsplash.com/1600x800/?taj');
+      background-size: cover;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+}*/
+  </style>
+</head>
+<body>
+    
+    <nav>
+    <div class="logo">
+      <img src="{% static 'image/logo.jpg' %}" alt="Logo" height="60" width="60"></div>
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#footer">Contact Us</a></li>
+      <li><a href="/#footer">Address</a></li>
+      <li><a href="/#footer">About Us</a></li>
+      
+    </ul>
+
+  </nav>
+    <br>
+    <div id="monument-img">
+        <img src="{% static 'image/ellora caves.jpg' %}" alt="nahi mila">
+    </div>
+    <a href="#" class="scroll_but top"><i class="fas fa-chevron-up"></i></i></a>
+    <a href="#credit" class="scroll_but bottom"><i class="fas fa-chevron-down"></i></a>
+    <center><h1 style="color: #3498db;">Ellora Caves</h1></center> 
+    <div id="monument-information">
+        <h2>Introduction</h2>
+        <p>
+            These 34 monasteries and temples, extending over more than 2 km, were dug side by side in the wall of a high basalt cliff, not far from Aurangabad, in Maharashtra. Ellora, with its uninterrupted sequence of monuments dating from A.D. 600 to 1000, brings the civilization of ancient India to life. Not only is the Ellora complex a unique artistic creation and a technological exploit but, with its sanctuaries devoted to Buddhism, Hinduism and Jainism, it illustrates the spirit of tolerance that was characteristic of ancient India.
+        </p>
+        <h2>About</h2>
+        <p>The invaluable ensemble of 34 caves at Ellora in the Charanandri hills of western India’s Maharashtra State showcases a spirit of co-existence and religious tolerance through the outstanding architectural activities carried out by the followers of three prominent religions: Buddhism, Brahmanism, and Jainism. The rock-cut activity was carried out in three phases from the 6th century to the 12th century. The earliest caves (caves 1–12), excavated between the 5th and 8th centuries, reflect the Mahayana philosophy of Buddhism then prevalent in this region. The Brahmanical group of caves (caves 13–29), including the renowned Kailasa temple (cave 16), was excavated between the 7th and 10th centuries. The last phase, between the 9th and 12th centuries, saw the excavation of a group of caves (caves 30–34) reflecting Jaina philosophy.</p>
+    </div>
+
+    <center>
+    <div id="timeline">
+        <div class="style-div">
+            <a href="/elobook"><p>Click to Book Ticket</p></a>
+        </div>
+    </div>
+    <br>
+    </center>
+    <div class="bottom">
+      <center>
+        <span class="credit" id="credit">Created By <a href="#">Aditya , Anurag & Anmol</a> &nbsp| </span>
+        <span class="far fa-copyright"></span><span>&nbspNo rights to reserved.</span>
+      </center>
+    </div>
+    
+</body>
+
+</html>

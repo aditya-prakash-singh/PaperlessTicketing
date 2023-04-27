@@ -1,0 +1,302 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ticket Book</title>
+    <link rel="stylesheet" href="{% static 'bookstyle.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="shortcut icon" href="https://i.ibb.co/LnHnznr/logo.jpg" type="image/x-icon">
+
+  </head>
+  <body>
+    <nav>
+    <div class="logo">
+      <img src="{% static 'image/logo.jpg' %}" alt="Logo" height="60" width="60"></div>
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#footer">Contact Us</a></li>
+      <li><a href="/#footer">Address</a></li>
+      <li><a href="/#footer">About Us</a></li>
+      
+    </ul>
+
+  </nav>
+  
+  <br><br><br>
+    <form class="signup-form" action="#">
+      <span id="price" style="display: none;">{{price}}</span>
+      <!-- form header -->
+      <div class="form-header">
+        <h1>Book Ticket For <span id="checkOK">{{monuname}} &nbsp</span></h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First name *</label>
+            <input type="text" id="firstname" class="form-input" required="required" autocomplete="off"/>
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name *</label>
+            <input type="text" id="lastname" class="form-input" required="required" autocomplete="off"/>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="email" class="label-title">Email *</label>
+            <input type="email" id="email" class="form-input"  required="required" autocomplete="off">
+          </div>
+          <div class="form-group right">
+            <label for="phone" class="label-title">Phone *</label>
+            <input type="phone" id="phone" class="form-input" required="required" autocomplete="off">
+          </div>
+        </div>
+
+
+        <!-- Gender and Hobbies -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Gender</label>
+            <div class="input-group">
+              <label for="male"><input type="radio" name="gender" value="Male" id="male" checked> Male</label>
+              <label for="female"><input type="radio" name="gender" value="Female" id="female"> Female</label>
+            </div>
+          </div>
+          <div class="form-group right">
+            <label class="label-title">Ticket</label>
+            <div >
+              <!-- <label><input type="checkbox" name="ticket1" value="RedFort" checked>Red Fort</label> -->
+              <label><input type="checkbox" name="ticket1" value="Museum">Museum</label>
+              <label><input type="checkbox" name="ticket1" value="TouristGuide">Tourist Guide</label>
+              <label><input type="checkbox" name="ticket1" value="WheelChair">Wheelchair</label>
+            </div>
+          </div>
+        </div>
+          
+        <!-- Nationality and visit date -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="nationality" class="label-title">Select Nationality</label>
+            <div class="input-group">
+              <label for="indian"><input type="radio" name="nationality" value="Indian" id="indian" checked> Indian</label>
+              <label for="foreigner"><input type="radio" name="nationality" value="Foreigner" id="foreigner"> Foreigner</label>
+            </div>
+          </div>
+          <div class="form-group right" >
+            <label class="label-title">Visit Date *</label>
+            <input type="date" name="startDate" id="startDate" value="" required onkeydown="return false">
+          </div>
+        </div>
+          
+        <!-- proof and proof id -->
+        <div class="horizontal-group">
+          <div class="form-group left" >
+            <label for="proof" class="label-title">Select Slot</label>
+            <select class="form-input" id="level">
+              <option value="Adhaar Card">Adhaar Card</option>
+              <option value="PanCard">Pan Card</option>
+              <option value="Passport">Passport</option>
+            </select>
+          </div>
+          <div class="form-group right">
+            <label for="proof-id" class="label-title">Id Number*</label>
+            <input type="text" class="form-input" id="proofID" required autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn" onclick="createTicket()">Create</button>
+      </div>
+
+    </form>
+    <form  method="post" action="/gogo" style="position: fixed;bottom: 0px;left: 0px;" >
+    {% csrf_token %} 
+    <input type="hidden" name="fn" id="fn"><br>
+    <input type="hidden" name="ln" id="ln"><br>
+    <input type="hidden" name="em" id="em"><br>
+    <input type="hidden" name="ph" id="ph"><br>
+    <input type="hidden" name="da" id="da"><br>
+    <input type="hidden" name="no" id="no"><br>
+    <button type="submit" name="submit" id="submit"></button><br><br><br><br>
+  </form>
+    <div class="bottom">
+      <center>
+        <span class="credit" id="credit">Created By <a href="#">Aditya , Anurag & Anmol</a> &nbsp| </span>
+        <span class="far fa-copyright"></span><span>&nbspNo rights to reserved.</span>
+      </center>
+    </div>
+    <script>
+      let i = 0;
+      let firstholder = "";
+    let lastholder = "";
+    let emailholder = "";
+    let phoneholder = "";
+    let idholder = "";
+    const first = "John";
+    const last = "Doe";
+    const email = "email@domain.com";
+    const phone = "+911111111111"
+    const id = "ABCDE12345"
+    const speed = 100;
+
+    function type(){
+      firstholder += first.charAt(i);
+      lastholder += last.charAt(i);
+      emailholder += email.charAt(i);
+      phoneholder += phone.charAt(i);
+      idholder += id.charAt(i);
+      document.getElementById("firstname").setAttribute("placeholder",firstholder);
+      document.getElementById("lastname").setAttribute("placeholder",lastholder);
+      document.getElementById("email").setAttribute("placeholder",emailholder);
+      document.getElementById("phone").setAttribute("placeholder",phoneholder);
+      document.getElementById("proofID").setAttribute("placeholder",idholder);
+      i++;
+      setTimeout(type,speed);
+    }
+
+    setTimeout(type, speed*10);
+
+    // disable previous date in javascript
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementsByName("startDate")[0].setAttribute('min', today)
+  </script>
+
+
+
+
+
+  <script type="text/javascript">
+    function createTicket() {
+    const firstName = document.getElementById("firstname").value;
+    const lastName = document.getElementById("lastname").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+    var nationality = document.querySelector('input[name="nationality"]:checked').value;
+    const visitDate = document.getElementById("startDate").value;
+    const proof = document.getElementById("level").value;
+    const proofID = document.getElementById("proofID").value;
+    var monumentName = document.getElementById("checkOK").innerHTML;
+    var rate = document.getElementById("price").innerHTML;
+    console.log(monumentName);
+
+    var checkboxes = document.getElementsByName('ticket1');
+    var ticket = [];
+    for (var i=0; i<checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+           ticket.push(checkboxes[i].value);
+        }
+    }
+    if(!firstName || !email || !phone || !visitDate || !proofID || !lastName){
+        alert("Fill all the Required Details");
+        return false;
+    }
+    var newStr = email.replace('@','#');
+    console.log(newStr);
+    document.getElementById('fn').value=firstName;
+    document.getElementById('ln').value=lastName;
+    document.getElementById('em').value=email;
+    document.getElementById('ph').value=phone;
+    document.getElementById('da').value=visitDate;
+    document.getElementById('no').value=proofID;
+    document.getElementById("submit").click();
+    console.log(document.getElementById('da').value);
+    var qrdata = "Name : " + firstName +
+                    " " + lastName + 
+                    " Email : " + newStr + 
+                    " Phone : " + phone +
+                    " Gender : " + gender +
+                    " Ticket : " + ticket +
+                    " Nationality : " + nationality +
+                    " Visit Date : " + visitDate +
+                    " Proof : " + proof +
+                    " Proof ID : " + proofID;
+    var qrImgLink = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrdata;
+    let myText = 
+            `<html>
+                <head>
+                    <title>Booked Ticket</title>
+                    
+                    <link rel='stylesheet' type='text/css' href="{% static 'styleticket.css' %}"/>
+
+                </head>
+                <body>
+                
+                `;
+    myText += ` <div class="parent">
+    <br>
+    <div class="child">
+    <header>
+    <h2><b>E-Ticket for :${ monumentName } </b></h2>
+    <h6>Ticket is Valid for one time use only</h6>
+    </header>
+    <hr><br>
+    <div class="name">
+    <div class="item"><b>Visitor's Name :</b> ${ firstName } ${ lastName } </div>
+    <div class="item"><b>Entry Fee :</b> Rs.${rate} </div>
+    <div class="item"><b>Visitor Type :</b> ${ nationality }</div>
+    <div class="item"><b>Other Facilities :</b> ${ ticket }</div>
+    <div class="item"><b>email :</b> ${ newStr }</div>
+    <div class="item">
+        <img src="${ qrImgLink }" alt="QRCode" align="right" class = "qr">
+    </div>
+    </div>
+    <br><hr><br>
+    <h4>Validity</h4>
+    <br>
+    <div class="name">
+    <div class="item"><b>Date : ${ visitDate }</b></div>
+    <div class="item"><b>Time : 12:00 PM-6:00 PM</b></div>
+    </div>
+    <br><hr><br>
+    <h4>Ticket Type : Adult</h4>
+    <br>
+    <div class="name">
+    <div class="item"><b>Identity Type : ${ proof }</b></div>
+    <div class="item"><b>Identity No : ${ proofID }</b></div>
+    </div>
+    <br><hr><br>
+    <div class="ending">
+    <h3>Important Information</h3>
+    <br><br>
+    <ol type="1">
+        <li>The e-ticket is not transferable.</li>
+        <li>Entry Fee is not refundable.</li>
+        <li> E-ticket cancellations are not permitted.</li>
+        <li>abakhfkadlbafbadnfkdabfkdnbabd</li>
+        <li><b>The Monument is open for visitors between sunrise and sunset.</b></li>
+        <li>Visitor shall be required to show photo identity proof in original at the entry to the monument.</li>
+        <li> Edibles are not allowed inside the monument.</li>
+        <li>Inflammable/dangerous/explosive articles are not allowed.</li>
+        <li> The entry to the monument will be closed 30 minutes prior to the closing time of the monument. </li>
+    </ol>
+    <img align="right" src="{% static 'image/logoo.jpg' %}" class="end"> <br><br>
+    
+    <input type='button' class='btn' id='download' name='download' download value='Download' onclick='window.print();' />
+    </div>
+    </div>
+    </div>
+    
+    </body>
+    </html>`;
+
+    let flyWindow = window.open(
+    "about:blank",
+    "myTicket",
+    "width=800,height=800,left=200,top=200"
+  );
+  flyWindow.document.write(myText);
+
+}
+  </script>
+  </body>
+</html>

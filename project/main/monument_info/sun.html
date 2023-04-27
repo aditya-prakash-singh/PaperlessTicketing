@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Sun Temple</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/sun temple konark.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#2b9098" />
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#2b9098">
+  <!-- IOS safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2b9098">
+  <style type="text/css">
+    /*.hero::before {    
+      content: "";
+      background-image: url('https://source.unsplash.com/1600x800/?taj');
+      background-size: cover;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+}*/
+  </style>
+</head>
+<body>
+    
+    <nav>
+    <div class="logo">
+      <img src="{% static 'image/logo.jpg' %}" alt="Logo" height="60" width="60"></div>
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#footer">Contact Us</a></li>
+      <li><a href="/#footer">Address</a></li>
+      <li><a href="/#footer">About Us</a></li>
+      
+    </ul>
+
+  </nav>
+    <br>
+    <div id="monument-img">
+        <img src="{% static 'image/sun temple konark.jpg' %}" alt="nahi mila">
+    </div>
+    <a href="#" class="scroll_but top"><i class="fas fa-chevron-up"></i></i></a>
+    <a href="#credit" class="scroll_but bottom"><i class="fas fa-chevron-down"></i></a>
+    <center><h1 style="color: #3498db;">Sun Temple</h1></center> 
+    <div id="monument-information">
+        <h2>Introduction</h2>
+        <p>
+            On the shores of the Bay of Bengal, bathed in the rays of the rising sun, the temple at Konarak is a monumental representation of the sun god Surya's chariot; its 24 wheels are decorated with symbolic designs and it is led by a team of six horses. Built in the 13th century, it is one of India's most famous Brahman sanctuaries.
+        </p>
+        <h2>About</h2>
+        <p>The Sun Temple at Konârak, located on the eastern shores of the Indian subcontinent, is one of the outstanding examples of temple architecture and art as revealed in its conception, scale and proportion, and in the sublime narrative strength of its sculptural embellishment. It is an outstanding testimony to the 13th-century kingdom of Orissa and a monumental example of the personification of divinity, thus forming an invaluable link in the history of the diffusion of the cult of Surya,the Sun God. In this sense, it is directly and materially linked to Brahmanism and tantricbelief systems. The Sun Temple is the culmination of Kalingan temple architecture, with all its defining elements in complete and perfect form.</p>
+    </div>
+
+    <center>
+    <div id="timeline">
+        <div class="style-div">
+            <a href="/sunbook"><p>Click to Book Ticket</p></a>
+        </div>
+    </div>
+    <br>
+    </center>
+    <div class="bottom">
+      <center>
+        <span class="credit" id="credit">Created By <a href="#">Aditya , Anurag & Anmol</a> &nbsp| </span>
+        <span class="far fa-copyright"></span><span>&nbspNo rights to reserved.</span>
+      </center>
+    </div>
+    
+</body>
+
+</html>

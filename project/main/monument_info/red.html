@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Red Fort</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/Red fort.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#2b9098" />
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#2b9098">
+  <!-- IOS safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2b9098">
+  <style type="text/css">
+    /*.hero::before {    
+      content: "";
+      background-image: url('https://source.unsplash.com/1600x800/?taj');
+      background-size: cover;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+}*/
+  </style>
+</head>
+<body>
+    
+    <nav>
+    <div class="logo">
+      <img src="{% static 'image/logo.jpg' %}" alt="Logo" height="60" width="60"></div>
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#footer">Contact Us</a></li>
+      <li><a href="/#footer">Address</a></li>
+      <li><a href="/#footer">About Us</a></li>
+      
+    </ul>
+
+  </nav>
+    <br>
+    <div id="monument-img">
+        <img src="{% static 'image/Red fort.jpg' %}" alt="nahi mila">
+    </div>
+    <a href="#" class="scroll_but top"><i class="fas fa-chevron-up"></i></i></a>
+    <a href="#credit" class="scroll_but bottom"><i class="fas fa-chevron-down"></i></a>
+    <center><h1 style="color: #3498db;">Red Fort</h1></center> 
+    <div id="monument-information">
+        <h2>Introduction</h2>
+        <p>The planning and design of the Red Fort represents a culmination of architectural development initiated in 1526 AD by the first Mughal Emperor and brought to a splendid refinement by Shah Jahan with a fusion of traditions: Islamic, Persian, Timurid and Hindu. The innovative planning arrangements and architectural style of building components as well as garden design developed in the Red Fort strongly influenced later buildings and gardens in Rajasthan, Delhi, Agra and further afield. The Red Fort has been the setting for events which have had a critical impact on its geo-cultural region.
+        </p>
+        <h2>About</h2>
+        <p>he Red Fort Complex was built as the palace fort of Shahjahanabad – the new capital of the fifth Mughal Emperor of India, Shah Jahan. Named for its massive enclosing walls of red sandstone, it is adjacent to an older fort, the Salimgarh, built by Islam Shah Suri in 1546, with which it forms the Red Fort Complex. The private apartments consist of a row of pavilions connected by a continuous water channel, known as the Nahr-i-Behisht (Stream of Paradise). The Red Fort is considered to represent the zenith of Mughal creativity which, under the Shah Jahan, was brought to a new level of refinement. The planning of the palace is based on Islamic prototypes, but each pavilion reveals architectural elements typical of Mughal building, reflecting a fusion of Persian, Timurid and Hindu traditions The Red Fort’s innovative planning and architectural style, including the garden design, strongly influenced later buildings and gardens in Rajasthan, Delhi, Agra and further afield.</p>
+    </div>
+
+    <center>
+    <div id="timeline">
+        <div class="style-div">
+            <a href="/redbook"><p>Click to Book Ticket</p></a>
+        </div>
+    </div>
+    <br>
+    </center>
+    <div class="bottom">
+      <center>
+        <span class="credit" id="credit">Created By <a href="#">Aditya , Anurag & Anmol</a> &nbsp| </span>
+        <span class="far fa-copyright"></span><span>&nbspNo rights to reserved.</span>
+      </center>
+    </div>
+    
+</body>
+
+</html>

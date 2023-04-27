@@ -1,0 +1,212 @@
+
+#monument-img {
+    max-width: 500px;
+    margin: 40px auto;
+}
+.scroll_but {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    padding: 10px;
+    display: block;
+    background: #000;
+    text-align: center;
+    line-height: 10px;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    z-index: 10000;
+  }
+  .scroll_but.top {
+    border-radius: 50%;
+    top: calc(50% - 40%);
+    background: #3498db;
+  }
+  .scroll_but.bottom {
+    border-radius: 50%;
+    top: calc(50% + 42%);
+    background: #3498db;
+  }
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 5%;
+    height: 60px;
+    background-color: #3498db;
+  }
+  
+  nav .logo {
+    float: left;
+    margin: 0px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  nav .links li {
+    list-style: none;
+  }
+  
+  nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav .contact:hover,
+  nav .links a:hover {
+    background: #fff;
+    color: #2b9098;
+    background-image: #2980b9;
+  }
+  nav .contact:hover {
+    color: #44e839 !important;
+  }
+  
+  nav .links a:hover {
+    border-radius: 10vh;
+  }
+  
+.bottom center {
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: pink;
+    margin: 0px;
+  }
+  .bottom center span {
+    color: #656565;
+  }
+  .bottom center a {
+    color: blue;
+    text-decoration: none;
+  }
+  .bottom center a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+  @media screen and (max-width: 768px) {
+    nav .logo {
+      float: none;
+      width: auto;
+      justify-content: center;
+    }
+  
+    nav .links {
+      float: none;
+      position: fixed;
+      z-index: 9;
+      left: 0;
+      right: 0;
+      top: 100px;
+      bottom: 100%;
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    nav .links a {
+      font-size: 20px;
+    }
+  
+    nav :checked ~ .links {
+      bottom: 0;
+    }
+  
+    
+  }
+#monument-img img {
+    width: 100%;
+    height: auto;
+}
+
+
+.style-div {
+   position: center;
+   top: 10px;
+   right: 0;
+   border: none;
+   padding: 10px 20px;
+   background-color: #0071c2;
+   color: white;
+   font-weight: bold;
+   border-radius: 5px;
+   cursor: pointer;
+   width: 67%;
+} 
+
+.style-div p {
+    padding: 1px;
+    color: white;
+    
+}
+.style-div a {
+    text-decoration: none;
+}
+.style-div a:visited {
+    text-decoration: none;
+}
+.style-div:hover {
+    background-color:#2ea382 ;
+    color: white;
+}
+#monument-information {
+    margin: 2% 15% 2% 15%;
+}
+
+#monument-information h2 {
+    font-family: monospace;
+}
+
+#monument-information p{
+    font-family: cursive;
+    font-size: 1.1rem;
+    
+}
+#head-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    background-color: rgb(207, 204, 204);
+}
+
+#head-container a img {
+    /* width: 100%; */
+    padding: 0.3%;
+    margin-right: 40px;
+}
+
+#sign-float {
+    float: right;
+}

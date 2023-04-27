@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajanta Caves</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/Ajanta caves.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#2b9098" />
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#2b9098">
+  <!-- IOS safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2b9098">
+  <style type="text/css">
+    /*.hero::before {    
+      content: "";
+      background-image: url('https://source.unsplash.com/1600x800/?taj');
+      background-size: cover;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.1;
+}*/
+  </style>
+</head>
+<body>
+    
+    <nav>
+    <div class="logo">
+      <img src="{% static 'image/logo.jpg' %}" alt="Logo" height="60" width="60"></div>
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#footer">Contact Us</a></li>
+      <li><a href="/#footer">Address</a></li>
+      <li><a href="/#footer">About Us</a></li>
+      
+    </ul>
+
+  </nav>
+    <br>
+    <div id="monument-img">
+        <img src="{% static 'image/Ajanta caves.jpg' %}" alt="nahi mila">
+    </div>
+    <a href="#" class="scroll_but top"><i class="fas fa-chevron-up"></i></i></a>
+    <a href="#credit" class="scroll_but bottom"><i class="fas fa-chevron-down"></i></a>
+    <center><h1 style="color: #3498db;">Ajanta Caves</h1></center> 
+    <div id="monument-information">
+        <h2>Introduction</h2>
+        <p>
+            The first Buddhist cave monuments at Ajanta date from the 2nd and 1st centuries B.C. During the Gupta period (5th and 6th centuries A.D.), many more richly decorated caves were added to the original group. The paintings and sculptures of Ajanta, considered masterpieces of Buddhist religious art, have had a considerable artistic influence.
+        </p>
+        <h2>About</h2>
+        <p>The caves at Ajanta are excavated out of a vertical cliff above the left bank of the river Waghora in the hills of Ajanta. They are thirty in number, including the unfinished ones, of which five (caves 9, 10, 19, 26 and 29) are chaityagrihas (sanctuary) and the rest, sangharamas or viharas (monastery). The caves are connected with the river by rock-cut staircases. The excavation activity was carried out in two different phases separated by an interval of about four centuries. The first phase coincides with the rule of the Satavahana dynasty from about the 2nd century BCE to the 1st century BCE, while the second phase corresponds to the Basim branch of the Vakataka dynasty with their Asmaka and Rishika feudatories in the 5th to 6th centuries CE.</p>
+    </div>
+
+    <center>
+    <div id="timeline">
+        <div class="style-div">
+            <a href="/ajabook"><p>Click to Book Ticket</p></a>
+        </div>
+    </div>
+    <br>
+    </center>
+    <div class="bottom">
+      <center>
+        <span class="credit" id="credit">Created By <a href="#">Aditya , Anurag & Anmol</a> &nbsp| </span>
+        <span class="far fa-copyright"></span><span>&nbspNo rights to reserved.</span>
+      </center>
+    </div>
+    
+</body>
+
+</html>

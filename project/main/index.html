@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Ticketing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="shortcut icon" href="https://i.ibb.co/LnHnznr/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  
+<body style="margin: 0px;padding: 0px;">
+    <!-- header -->
+  <nav>
+    <div class="logo">
+      <img src="{% static 'image/logo.jpg' %}" alt="Logo" height="60" width="60"></div>
+    <ul class="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#footer">Contact Us</a></li>
+      <li><a href="#footer">Address</a></li>
+      <li><a href="#footer">About Us</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- top and bottom scroll button -->
+  <a href="#" class="scroll_but top"><i class="fas fa-chevron-up"></i></i></a>
+  <a href="#finish" class="scroll_but bottom"><i class="fas fa-chevron-down"></i></a>
+
+  <div id="selectbox">
+  
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+  <!-- Photo Grid -->
+  <div class="container-pic"> 
+    <div class="box-pic">
+      <img src="{% static 'image/taj mahal.webp' %}" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Taj Mahal <br>
+            Agra
+          </h2>
+          <p>
+            ₹120
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="/taj"><button type="submit" value="submit">View Information</button></a> 
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="{% static 'image/Ajanta caves.jpg' %}" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Ajanta Caves <br>
+            Aurangabad
+          </h2>
+          <p>
+            ₹25
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="/aja"><button type="submit" value="submit">View Information</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>  
+    <div class="box-pic">
+      <img src="{% static 'image/ellora caves.jpg' %}" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Ellora Caves <br>
+            Aurangabad
+          </h2>
+          <p>
+            ₹30
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="/elo"><button type="submit" value="submit">View Information</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="{% static 'image/jantar Mantar.jpg' %}" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Jantar Mantar <br>
+            New Delhi
+          </h2>
+          <p>
+            ₹20
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="/jan"><button type="submit" value="submit">View Information</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="{% static 'image/khajuraho.webp' %}" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Khajuraho <br>
+            Chatarpur
+          </h2>
+          <p>
+            ₹30
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="/khaj"><button type="submit" value="submit">View Information</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="{% static 'image/qutub minar1.jpg' %}" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Qutub Minar <br>
+            New Delhi
+          </h2>
+          <p>
+            ₹25
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="/qua"><button type="submit" value="submit">View Information</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="{% static 'image/Red fort.jpg' %}" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Red Fort <br>
+            New Delhi
+          </h2>
+          <p>
+            ₹25
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="/red"><button type="submit" value="submit">View Information</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>
+    <div class="box-pic">
+      <img src="{% static 'image/statue of unity.jpg' %}" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Statue of Unity <br>
+            Kevadia
+          </h2>
+          <p>
+            ₹35
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="/sar"><button type="submit" value="submit">View Information</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>  
+    <div class="box-pic">
+      <img src="{% static 'image/sun temple konark.jpg' %}" style="height: 100%; width:100%">
+      <div class="overlay-pic">
+        <div class="text-pic">
+          <h2>
+            Sun Temple <br>
+            Konark
+          </h2>
+          <p>
+            ₹30
+          </p>
+        </div>
+      </div>
+      <div class="book">
+        <a href="/sun"><button type="submit" value="submit">View Information</button></a>
+        <!-- change type to submit -->
+      </div>
+    </div>
+    
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div class="content" id="footer">
+  </div>
+  <footer>
+    <div class="main-content">
+      <div class="left box">
+        <h2>About us</h2>
+        <div class="content">
+          <p>This Is a prototype web app created by our team i.e. Aditya , Anurag and Anmol</p>
+          <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"><span class="fab fa-facebook-f"></span></a>
+            <a href="https://twitter.com/login?lang=en" target="_blank"><span class="fab fa-twitter"></span></a>
+            <a href="https://www.instagram.com/" target="_blank"><span class="fab fa-instagram"></span></a>
+            <a href="https://www.youtube.com/" target="_blank"><span class="fab fa-youtube"></span></a>
+            <a href="https://www.linkedin.com/" target="_blank"><span class="fab fa-linkedin"></span></a>
+            <a href="https://github.com/aditya-prakash-singh" target="_blank"><span class="fab fa-github"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="center box">
+        <h2>Address</h2>
+        <div class="content">
+          <div class="place">
+            
+            <a href="https://www.google.com/maps/place/Jabalpur,+Madhya+Pradesh/@23.1756331,79.828667,11z/data=!3m1!4b1!4m6!3m5!1s0x3981ae1a0fb6a97d:0x44020616bc43e3b9!8m2!3d23.1685786!4d79.9338798!16zL20vMDJkcm5r"><span class="fas fa-map-marker-alt"></span><span class="text">Jabalpur</span></a> 
+          </div>
+          <div class="phone">
+            
+            <a href="tel:+910000000000" target="_blank"><span class="fas fa-phone-alt"></span><span class="text">+910000000000</span></a> 
+          </div>
+          <div class="email">
+            
+            <a href="mailto:dbms@gmail.com"  target="_blank"><span class="fas fa-envelope"></span><span class="text">dbms@gmail.com</span></a> 
+          </div>
+        </div>
+      </div>
+
+      <div class="right box">
+        <h2>Contact us</h2>
+        <div class="content">
+          <form action="/">
+            <div class="email">
+              <div class="text">Email *</div>
+              <input type="email" id="email-id" required autocomplete="off">
+            </div>
+            <div class="msg">
+              <div class="text">Message *</div>
+              <textarea rows="2" cols="25" id="message" required autocomplete="off"></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit" value="submit">Send</button> 
+              <!-- change type to submit -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <center>
+        <span class="credit">Created By <a href="#">Aditya , Anurag & Anmol</a> &nbsp| </span>
+        <span class="far fa-copyright"></span><span>&nbspNo rights to reserved.</span>
+      </center>
+    </div>
+  </footer>
+
+  <div id="finish"></div>
+
+  <script>
+    let i = 0;
+      let placeholder = "";
+	    let msgholder = "";
+	    const txt = "email@domain.com";
+	    const pss = "Type any message"
+	    const speed = 100;
+
+	    function type(){
+    	  placeholder += txt.charAt(i);
+		    msgholder += pss.charAt(i);
+    	  document.getElementById("email-id").setAttribute("placeholder",placeholder);
+		    document.getElementById("message").setAttribute("placeholder",msgholder);
+    	  i++;
+    	  setTimeout(type,speed);
+	    }
+
+	    setTimeout(type, speed*10);
+    </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+
+/*---------------------------------------*/
+/* Register Form */
+/*---------------------------------------*/
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-image: url(https://static.businessworld.in/article/article_extra_large_image/1587722852_0pILuE_travel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: "Montserrat", sans-serif;
+    padding: 0 5%;
+    height: 60px;
+    background-color: #3498db;
+  }
+  
+  nav .logo {
+    float: left;
+    margin: 0px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  nav .links li {
+    list-style: none;
+  }
+  
+  nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav .contact:hover,
+  nav .links a:hover {
+    background: #fff;
+    color: #2b9098;
+    background-image: #2980b9;
+  }
+  nav .contact:hover {
+    color: #44e839 !important;
+  }
+  
+  nav .links a:hover {
+    border-radius: 10vh;
+  }
+.bottom{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+.bottom center {
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: pink;
+    margin: 0px;
+  }
+  .bottom center span {
+    color: #656565;
+  }
+  .bottom center a {
+    color: blue;
+    text-decoration: none;
+  }
+  .bottom center a:hover {
+    text-decoration: underline;
+  }
+
+.signup-form {
+  font-family: "Roboto", sans-serif;
+  /* width:50%; */
+  /* margin:5% auto; */
+  width: 100vh;
+  margin: 2vh auto;
+  background:linear-gradient(#6ED5F0 0%, #C2E0ee 50%, #6eb5f0 99%);
+  border-radius: 10px;
+}
+
+/*---------------------------------------*/
+/* Form Header */
+/*---------------------------------------*/
+.form-header  {
+  background-color: #6cbbfc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-header h1 {
+  font-size: 30px;
+  text-align:center;
+  color:rgb(20,8,8);
+  padding:20px;
+  border-bottom:1px solid #ae9393;
+}
+
+/*---------------------------------------*/
+/* Form Body */
+/*---------------------------------------*/
+.form-body {
+  padding:10px 40px;
+  color:rgb(18,14,14);
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+.form-body .label-title {
+  color:#2b9098;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+    caret-color: red;
+}
+
+
+
+.horizontal-group .left{
+  float:left;
+  width:49%;
+}
+
+.horizontal-group .right{
+  float:right;
+  width:49%;
+}
+
+
+::-webkit-input-placeholder  {
+  color:#74dee6;
+}
+
+/*---------------------------------------*/
+/* Form Footer */
+/*---------------------------------------*/
+.signup-form .form-footer  {
+  background-color: #6cb0f5;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding:10px 40px;
+  text-align: right;
+  border-top: 1px solid #89aeef;
+  clear:both;
+}
+
+.form-footer span {
+  float:left;
+  margin-top: 10px;
+  color:rgb(20,20,20);  
+  font-style: italic;
+  font-weight: thin;
+}
+
+.btn {
+   margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 50%;
+    height: 40px;
+    position: relative;
+    margin-left: 2rem;
+    width: 30% !important;
+    border: none;
+    outline: none;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 16px;
+    background: linear-gradient(45deg, #38c4c4, #42e9e9) !important;
+    box-shadow: 7px -7px 21px #288c8c, -7px 7px 21px #54ffff;
+}
+
+.btn:hover {
+    border-radius: 16px;
+    background: linear-gradient(225deg, #38c4c4, #42e9e9);
+    box-shadow: -7px 7px 21px #288c8c, 7px -7px 21px #54ffff;
+}
+
+
+@media screen and (max-width: 768px){
+    .horizontal-group .left{
+        float:none;
+        flex-direction: column;
+        width:49%;
+        left: 0;
+        right: 0;
+      }
+      
+      .horizontal-group .right{
+        float: none;
+        flex-direction: column;
+        width:49%;
+        left: 0;
+        right: 0;
+      }
+      .signup-form {
+        width:none;
+        margin:none auto;
+      }
+}
