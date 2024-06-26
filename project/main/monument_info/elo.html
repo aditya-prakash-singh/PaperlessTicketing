@@ -55,7 +55,11 @@
         </p>
         <h2>About</h2>
         <p>The invaluable ensemble of 34 caves at Ellora in the Charanandri hills of western India’s Maharashtra State showcases a spirit of co-existence and religious tolerance through the outstanding architectural activities carried out by the followers of three prominent religions: Buddhism, Brahmanism, and Jainism. The rock-cut activity was carried out in three phases from the 6th century to the 12th century. The earliest caves (caves 1–12), excavated between the 5th and 8th centuries, reflect the Mahayana philosophy of Buddhism then prevalent in this region. The Brahmanical group of caves (caves 13–29), including the renowned Kailasa temple (cave 16), was excavated between the 7th and 10th centuries. The last phase, between the 9th and 12th centuries, saw the excavation of a group of caves (caves 30–34) reflecting Jaina philosophy.</p>
-    </div>
+        <h2>Weather Information</h2>
+        <p>City: {{ weather.name }}</p>
+        <p>Temperature: {{ weather.main.temp }} K, Feels Like: {{ weather.main.feels_like }} K</p>
+        <p>Min: {{ weather.main.temp_min }} K, Max: {{ weather.main.temp_max }} K</p>
+        <p>Weather: {{ weather.weather.0.description }}</p></div>
 
     <center>
     <div id="timeline">

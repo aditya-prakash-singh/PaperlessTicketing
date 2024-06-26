@@ -57,7 +57,11 @@
         </p>
         <h2>About</h2>
         <p>Most Khajuraho temples were built between 950 and 1050 by the Chandela dynasty. Historical records note that the Khajuraho temple site had 85 temples by the 12th century, spread over 20 square kilometers Of these, only about 25 temples have survived, spread over six square kilometers. Of the surviving temples, the Kandariya Mahadeva Temple is decorated with a profusion of sculptures with intricate details, symbolism and expressiveness of ancient Indian art.</p>
-    </div>
+        <h2>Weather Information</h2>
+        <p>City: {{ weather.name }}</p>
+        <p>Temperature: {{ weather.main.temp }} K, Feels Like: {{ weather.main.feels_like }} K</p>
+        <p>Min: {{ weather.main.temp_min }} K, Max: {{ weather.main.temp_max }} K</p>
+        <p>Weather: {{ weather.weather.0.description }}</p></div>
 
     <center>
     <div id="timeline">

@@ -91,17 +91,16 @@ nav {
     border-radius: 10vh;
   }
   
-.bottom center {
+  .bottom center {
     padding: 5px;
     font-size: 0.9375rem;
-    background: pink;
-    margin: 0px;
+    background: #0e3778;
   }
   .bottom center span {
-    color: #656565;
+    color: white;
   }
   .bottom center a {
-    color: blue;
+    color: whitesmoke;
     text-decoration: none;
   }
   .bottom center a:hover {

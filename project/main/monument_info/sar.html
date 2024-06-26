@@ -55,7 +55,11 @@
         </p>
         <h2>About</h2>
         <p>October 31st, 2018, marked the inauguration of the world’s tallest statue – the Statue of Unity, against the backdrop of the dramatic Satpura and Vindhyachal hills in Kevadia, Gujarat. The 182-metre (600 feet aprox.) statue is dedicated to Sardar Vallabhbhai Patel, the architect of independent India. The colossal monument towers over River Narmada, a tribute to India ‘from the people of Gujarat’ to the leader who placed people’s welfare first. The Statue of Unity overlooks the vast surrounds and the river basin of the Narmada River and the sprawling Sardar Sarovar dam. It stands on the Sadhu Bet hillock, connected by a 300-metre bridge, which offers access from the mainland to the statue.</p>
-    </div>
+        <h2>Weather Information</h2>
+        <p>City: {{ weather.name }}</p>
+        <p>Temperature: {{ weather.main.temp }} K, Feels Like: {{ weather.main.feels_like }} K</p>
+        <p>Min: {{ weather.main.temp_min }} K, Max: {{ weather.main.temp_max }} K</p>
+        <p>Weather: {{ weather.weather.0.description }}</p></div>
 
     <center>
     <div id="timeline">

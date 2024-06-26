@@ -55,7 +55,11 @@
         </p>
         <h2>About</h2>
         <p>The Sun Temple at Konârak, located on the eastern shores of the Indian subcontinent, is one of the outstanding examples of temple architecture and art as revealed in its conception, scale and proportion, and in the sublime narrative strength of its sculptural embellishment. It is an outstanding testimony to the 13th-century kingdom of Orissa and a monumental example of the personification of divinity, thus forming an invaluable link in the history of the diffusion of the cult of Surya,the Sun God. In this sense, it is directly and materially linked to Brahmanism and tantricbelief systems. The Sun Temple is the culmination of Kalingan temple architecture, with all its defining elements in complete and perfect form.</p>
-    </div>
+        <h2>Weather Information</h2>
+        <p>City: {{ weather.name }}</p>
+        <p>Temperature: {{ weather.main.temp }} K, Feels Like: {{ weather.main.feels_like }} K</p>
+        <p>Min: {{ weather.main.temp_min }} K, Max: {{ weather.main.temp_max }} K</p>
+        <p>Weather: {{ weather.weather.0.description }}</p></div>
 
     <center>
     <div id="timeline">

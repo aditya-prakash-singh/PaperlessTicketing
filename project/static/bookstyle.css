@@ -76,18 +76,17 @@ nav {
   width: 100%;
 }
 .bottom center {
-    padding: 5px;
-    font-size: 0.9375rem;
-    background: pink;
-    margin: 0px;
-  }
-  .bottom center span {
-    color: #656565;
-  }
-  .bottom center a {
-    color: blue;
-    text-decoration: none;
-  }
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #0e3778;
+}
+.bottom center span {
+  color: white;
+}
+.bottom center a {
+  color: whitesmoke;
+  text-decoration: none;
+}
   .bottom center a:hover {
     text-decoration: underline;
   }

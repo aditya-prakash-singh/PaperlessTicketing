@@ -54,7 +54,11 @@
         </p>
         <h2>About</h2>
         <p>The ensemble of mosques, minars, and other structures in the Qutb Minar complex is an outstanding testimony to the architectural and artistic achievements of Islamic rulers after they first established their power in the Indian subcontinent in the 12th century. The complex, located at the southern fringe of New Delhi, illustrates the new rulers’ aspiration to transform India from Dar-al-Harb to Dar-al-Islam with the introduction of distinctive building types and forms.</p>
-    </div>
+        <h2>Weather Information</h2>
+        <p>City: {{ weather.name }}</p>
+        <p>Temperature: {{ weather.main.temp }} K, Feels Like: {{ weather.main.feels_like }} K</p>
+        <p>Min: {{ weather.main.temp_min }} K, Max: {{ weather.main.temp_max }} K</p>
+        <p>Weather: {{ weather.weather.0.description }}</p></div>
 
     <center>
     <div id="timeline">

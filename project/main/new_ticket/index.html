@@ -22,9 +22,9 @@
     </ul>
 
   </nav>
-  
   <br><br><br>
-    <form class="signup-form" action="#">
+    <form class="signup-form"  method="post" action="/gogo" >
+      {% csrf_token %} 
       <span id="price" style="display: none;">{{price}}</span>
       <!-- form header -->
       <div class="form-header">
@@ -38,11 +38,11 @@
         <div class="horizontal-group">
           <div class="form-group left">
             <label for="firstname" class="label-title">First name *</label>
-            <input type="text" id="firstname" class="form-input" required="required" autocomplete="off"/>
+            <input type="text" id="firstname" name="firstname"class="form-input" required="required" autocomplete="off"/>
           </div>
           <div class="form-group right">
             <label for="lastname" class="label-title">Last name *</label>
-            <input type="text" id="lastname" class="form-input" required="required" autocomplete="off"/>
+            <input type="text" id="lastname" name="lastname" class="form-input" required="required" autocomplete="off"/>
           </div>
         </div>
 
@@ -50,11 +50,11 @@
         <div class="horizontal-group">
           <div class="form-group left">
             <label for="email" class="label-title">Email *</label>
-            <input type="email" id="email" class="form-input"  required="required" autocomplete="off">
+            <input type="email" id="email" name="email" class="form-input"  required="required" autocomplete="off">
           </div>
           <div class="form-group right">
             <label for="phone" class="label-title">Phone *</label>
-            <input type="phone" id="phone" class="form-input" required="required" autocomplete="off">
+            <input type="phone" id="phone" name="phone" class="form-input" required="required" autocomplete="off">
           </div>
         </div>
 
@@ -69,7 +69,7 @@
             </div>
           </div>
           <div class="form-group right">
-            <label class="label-title">Ticket</label>
+            <label class="label-title">Other Facilities</label>
             <div >
               <!-- <label><input type="checkbox" name="ticket1" value="RedFort" checked>Red Fort</label> -->
               <label><input type="checkbox" name="ticket1" value="Museum">Museum</label>
@@ -106,7 +106,7 @@
           </div>
           <div class="form-group right">
             <label for="proof-id" class="label-title">Id Number*</label>
-            <input type="text" class="form-input" id="proofID" required autocomplete="off">
+            <input type="text" class="form-input" id="no" name="no" required autocomplete="off">
           </div>
         </div>
       </div>
@@ -114,20 +114,11 @@
       <!-- form-footer -->
       <div class="form-footer">
         <span>* required</span>
-        <button type="submit" class="btn" onclick="createTicket()">Create</button>
+        <button class="btn" onclick="createTicket()">Create</button>
       </div>
-
+      <button type="submit" name="submit" id="submit"></button>
     </form>
-    <form  method="post" action="/gogo" style="position: fixed;bottom: 0px;left: 0px;" >
-    {% csrf_token %} 
-    <input type="hidden" name="fn" id="fn"><br>
-    <input type="hidden" name="ln" id="ln"><br>
-    <input type="hidden" name="em" id="em"><br>
-    <input type="hidden" name="ph" id="ph"><br>
-    <input type="hidden" name="da" id="da"><br>
-    <input type="hidden" name="no" id="no"><br>
-    <button type="submit" name="submit" id="submit"></button><br><br><br><br>
-  </form>
+    
     <div class="bottom">
       <center>
         <span class="credit" id="credit">Created By <a href="#">Aditya , Anurag & Anmol</a> &nbsp| </span>
@@ -158,7 +149,7 @@
       document.getElementById("lastname").setAttribute("placeholder",lastholder);
       document.getElementById("email").setAttribute("placeholder",emailholder);
       document.getElementById("phone").setAttribute("placeholder",phoneholder);
-      document.getElementById("proofID").setAttribute("placeholder",idholder);
+      document.getElementById("no").setAttribute("placeholder",idholder);
       i++;
       setTimeout(type,speed);
     }
@@ -184,7 +175,7 @@
     var nationality = document.querySelector('input[name="nationality"]:checked').value;
     const visitDate = document.getElementById("startDate").value;
     const proof = document.getElementById("level").value;
-    const proofID = document.getElementById("proofID").value;
+    const proofID = document.getElementById("no").value;
     var monumentName = document.getElementById("checkOK").innerHTML;
     var rate = document.getElementById("price").innerHTML;
     console.log(monumentName);
@@ -200,22 +191,12 @@
         alert("Fill all the Required Details");
         return false;
     }
-    var newStr = email.replace('@','#');
-    console.log(newStr);
-    document.getElementById('fn').value=firstName;
-    document.getElementById('ln').value=lastName;
-    document.getElementById('em').value=email;
-    document.getElementById('ph').value=phone;
-    document.getElementById('da').value=visitDate;
-    document.getElementById('no').value=proofID;
-    document.getElementById("submit").click();
-    console.log(document.getElementById('da').value);
     var qrdata = "Name : " + firstName +
                     " " + lastName + 
-                    " Email : " + newStr + 
+                    " Email : " + email + 
                     " Phone : " + phone +
                     " Gender : " + gender +
-                    " Ticket : " + ticket +
+                    " Other Facilities : " + ticket +
                     " Nationality : " + nationality +
                     " Visit Date : " + visitDate +
                     " Proof : " + proof +
@@ -245,7 +226,7 @@
     <div class="item"><b>Entry Fee :</b> Rs.${rate} </div>
     <div class="item"><b>Visitor Type :</b> ${ nationality }</div>
     <div class="item"><b>Other Facilities :</b> ${ ticket }</div>
-    <div class="item"><b>email :</b> ${ newStr }</div>
+    <div class="item"><b>email :</b> ${ email }</div>
     <div class="item">
         <img src="${ qrImgLink }" alt="QRCode" align="right" class = "qr">
     </div>
@@ -295,6 +276,7 @@
     "width=800,height=800,left=200,top=200"
   );
   flyWindow.document.write(myText);
+  document.getElementById("submit").click();
 
 }
   </script>

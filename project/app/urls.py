@@ -27,4 +27,5 @@ urlpatterns = [
 
     path("database",views.dbms,name="dbms"),
     path('admin/', admin.site.urls),
+    # path('showdb/',views.show_db,name="show_db"),
 ]

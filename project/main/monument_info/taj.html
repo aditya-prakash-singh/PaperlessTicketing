@@ -61,7 +61,13 @@
             
             
             People continue to sing accolades for Shah Jahan's magnificent deed. It inspires you to believe in love and cherish it in new ways. We may also observe how the immortal lovers' bodies are buried beneath the tomb. Shah Jahan and Mumtaz Mahal were buried next to each other and remained so long after death.</p>
-    </div>
+    
+            <h2>Weather Information</h2>
+    <p>City: {{ weather.name }}</p>
+    <p>Temperature: {{ weather.main.temp }} K, Feels Like: {{ weather.main.feels_like }} K</p>
+    <p>Min: {{ weather.main.temp_min }} K, Max: {{ weather.main.temp_max }} K</p>
+    <p>Weather: {{ weather.weather.0.description }}</p>
+          </div>
 
     <center>
         

@@ -55,7 +55,11 @@
         </p>
         <h2>About</h2>
         <p>The caves at Ajanta are excavated out of a vertical cliff above the left bank of the river Waghora in the hills of Ajanta. They are thirty in number, including the unfinished ones, of which five (caves 9, 10, 19, 26 and 29) are chaityagrihas (sanctuary) and the rest, sangharamas or viharas (monastery). The caves are connected with the river by rock-cut staircases. The excavation activity was carried out in two different phases separated by an interval of about four centuries. The first phase coincides with the rule of the Satavahana dynasty from about the 2nd century BCE to the 1st century BCE, while the second phase corresponds to the Basim branch of the Vakataka dynasty with their Asmaka and Rishika feudatories in the 5th to 6th centuries CE.</p>
-    </div>
+        <h2>Weather Information</h2>
+        <p>City: {{ weather.name }}</p>
+        <p>Temperature: {{ weather.main.temp }} K, Feels Like: {{ weather.main.feels_like }} K</p>
+        <p>Min: {{ weather.main.temp_min }} K, Max: {{ weather.main.temp_max }} K</p>
+        <p>Weather: {{ weather.weather.0.description }}</p></div>
 
     <center>
     <div id="timeline">

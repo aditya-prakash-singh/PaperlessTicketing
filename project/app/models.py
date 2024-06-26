@@ -10,3 +10,4 @@ class Ticket(models.Model):
 	id_no=models.CharField(max_length=122)
 	def __str__(self):
 		return self.fname
+	
